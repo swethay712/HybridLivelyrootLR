@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-29T14:52:13 IST" name="Suite" finished-at="2025-12-29T14:53:14 IST" duration-ms="60580">
+    <groups>
+    </groups>
+    <test started-at="2025-12-29T14:52:13 IST" name="Test" finished-at="2025-12-29T14:53:14 IST" duration-ms="60580">
+      <class name="testCases.TC1Login">
+        <test-method is-config="true" signature="openURL()[pri:0, instance:testCases.TC1Login@815b41f]" started-at="2025-12-29T14:51:57 IST" name="openURL" finished-at="2025-12-29T14:52:13 IST" duration-ms="15959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openURL -->
+        <test-method signature="LRShopHolidayDecor()[pri:1, instance:testCases.TC1Login@815b41f]" started-at="2025-12-29T14:52:15 IST" name="LRShopHolidayDecor" finished-at="2025-12-29T14:52:25 IST" duration-ms="10170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LRShopHolidayDecor -->
+        <test-method signature="LRShopbycollection()[pri:2, instance:testCases.TC1Login@815b41f]" started-at="2025-12-29T14:52:25 IST" name="LRShopbycollection" finished-at="2025-12-29T14:52:51 IST" duration-ms="26546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LRShopbycollection -->
+        <test-method signature="LRshopbycollection1()[pri:3, instance:testCases.TC1Login@815b41f]" started-at="2025-12-29T14:52:51 IST" name="LRshopbycollection1" finished-at="2025-12-29T14:53:14 IST" duration-ms="22572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LRshopbycollection1 -->
+        <test-method is-config="true" signature="closeURL()[pri:0, instance:testCases.TC1Login@815b41f]" started-at="2025-12-29T14:53:15 IST" name="closeURL" finished-at="2025-12-29T14:53:16 IST" duration-ms="976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeURL -->
+      </class> <!-- testCases.TC1Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
