@@ -38,9 +38,9 @@ public class Baseclass {
 	 
 	 public String screenshot(String tname) {
 		String timestamp=new SimpleDateFormat("yyyy.MM.dd.hh.mm.ss").format(new Date());
-		 TakesScreenshot ts=(TakesScreenshot)driver;
-		 File source =ts.getScreenshotAs(OutputType.FILE);
-		 String dest=System.getProperty("user.dir")+"\\Screenshots\\"+timestamp+"-"+timestamp+"-"+"_img.png";
+		 TakesScreenshot ts=(TakesScreenshot)driver;//typecastingconverting the driver object into TakesScreenshot type so that you can take a screenshot.
+		 File source =ts.getScreenshotAs(OutputType.FILE);//storing scrnshot in temporary memory
+		 String dest=System.getProperty("user.dir")+"\\Screenshots\\"+tname+"-"+timestamp+"-"+"_img.png";
 		 try {
 			 FileUtils.copyFile(source, new File(dest));
 		 }
@@ -48,7 +48,8 @@ public class Baseclass {
 			 e.getMessage();
 		 }
 		 return dest;
-		 
+		 //user.dir=It returns the project’s root folder path where your program is running.
 	 }
-	 
 }
+
+   

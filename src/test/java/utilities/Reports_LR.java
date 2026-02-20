@@ -15,6 +15,8 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import base.Baseclass;
+
 public class Reports_LR implements ITestListener{
 	public ExtentSparkReporter report;
 	//provides basic info of the document like reportname,doc name,theme of the report
@@ -25,10 +27,11 @@ public class Reports_LR implements ITestListener{
 //pre defined methods(onstart,ontestsuccess,ontestfailure,ontestskipped,onfinish
 	
 	public void onStart(ITestContext tr) {
-		String timeStamp=new SimpleDateFormat("yyyy.MM.DD.mm.ss").format(new Date());
+		String timeStamp=new SimpleDateFormat("yyyy.MM.DD HH.mm.ss").format(new Date());
 		String rename="LivelyRoot"+timeStamp+".html";
 		report=new ExtentSparkReporter(rename);
-		report=new ExtentSparkReporter("C:\\Users\\admin\\eclipse-workspace\\HybridLivelyRoot\\ExtentReports"+rename);
+		report=new ExtentSparkReporter("C:\\Users\\admin\\eclipse-workspace\\HybridLivelyRoot\\Extent Reports\\"+rename);
+	
 		report.config().setDocumentTitle("LivelyRoot");
 		report.config().setReportName("LivelyRoot-products");
 		report.config().setTheme(Theme.STANDARD);
@@ -50,6 +53,9 @@ public class Reports_LR implements ITestListener{
 	public void onTestFailure(ITestResult tr) {
 		test=extent.createTest(tr.getName());
 		test.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(),ExtentColor.RED));
+	String impactlocation=new Baseclass().screenshot(tr.getName());
+	test.addScreenCaptureFromPath(impactlocation);
+
 	}
 	public void onTestSkipped(ITestResult tr) {
 		test=extent.createTest(tr.getName());
